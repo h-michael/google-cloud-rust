@@ -154,6 +154,12 @@ impl Stream for MessageStream {
     }
 }
 
+impl MessageStream {
+    pub fn queue_size(&self) -> usize {
+        self.queue.len()
+    }
+}
+
 /// Subscription is a reference to a PubSub subscription.
 #[derive(Clone, Debug)]
 pub struct Subscription {
