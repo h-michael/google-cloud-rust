@@ -179,6 +179,10 @@ impl MessageStream {
         }
         message
     }
+
+    pub fn queue_size(&self) -> usize {
+        self.queue.len()
+    }
 }
 
 impl Drop for MessageStream {
